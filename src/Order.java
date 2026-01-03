@@ -1,23 +1,20 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Order {
-    private List<MenuItem> items = new ArrayList<>();
+    private ArrayList<MenuItem> items = new ArrayList<>();
 
     public void addItem(MenuItem item) {
         items.add(item);
     }
 
-    public double getTotal() {
-        double sum = 0;
-        for (MenuItem item : items) {
-            sum += item.getPrice();
-        }
-        return sum;
-    }
-
     public void showOrder() {
-        items.forEach(System.out::println);
-        System.out.println("Total: $" + getTotal());
+        double total = 0;
+
+        for (MenuItem item : items) {
+            System.out.println(item);
+            total += item.getPrice();
+        }
+
+        System.out.println("Total: $" + total);
     }
 }

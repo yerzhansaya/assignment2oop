@@ -9,8 +9,10 @@ public abstract class MenuItem {
         this.price = price;
     }
 
-    public abstract String getCategory(); // abstraction
+    // abstraction
+    public abstract String getCategory();
 
+    // encapsulation
     public String getName() {
         return name;
     }
@@ -19,7 +21,7 @@ public abstract class MenuItem {
         return price;
     }
 
-    public void setPrice(double price) { // encapsulation
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -31,9 +33,9 @@ public abstract class MenuItem {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof MenuItem)) return false;
-        MenuItem item = (MenuItem) o;
-        return Objects.equals(name, item.name);
+        if (o == null || getClass() != o.getClass()) return false;
+        MenuItem menuItem = (MenuItem) o;
+        return name.equals(menuItem.name);
     }
 
     @Override
