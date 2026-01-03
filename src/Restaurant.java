@@ -3,12 +3,12 @@ import java.util.ArrayList;
 public class Restaurant {
     private ArrayList<MenuItem> menu = new ArrayList<>();
 
-    // organizing data pool
+
     public void addItem(MenuItem item) {
         menu.add(item);
     }
 
-    // searching
+
     public MenuItem findByName(String name) {
         for (MenuItem item : menu) {
             if (item.getName().equalsIgnoreCase(name)) {
@@ -18,7 +18,7 @@ public class Restaurant {
         return null;
     }
 
-    // filtering
+
     public void filterByCategory(String category) {
         for (MenuItem item : menu) {
             if (item.getCategory().equalsIgnoreCase(category)) {
@@ -27,7 +27,7 @@ public class Restaurant {
         }
     }
 
-    // sorting
+
     public void sortByPrice() {
         for (int i = 0; i < menu.size(); i++) {
             for (int j = i + 1; j < menu.size(); j++) {

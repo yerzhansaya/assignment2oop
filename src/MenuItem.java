@@ -9,10 +9,10 @@ public abstract class MenuItem {
         this.price = price;
     }
 
-    // abstraction
+
     public abstract String getCategory();
 
-    // encapsulation
+
     public String getName() {
         return name;
     }
